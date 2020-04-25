@@ -21,7 +21,7 @@ RUN chmod -v +x /run-httpd.sh
 RUN wget -O /usr/share/doc/icingaweb2/schema/pgsql.schema.sql https://raw.githubusercontent.com/Icinga/icingaweb2/master/etc/schema/pgsql.schema.sql
 
 # Update PHP timezone
-RUN sed -i 's/;date.timezone =/date.timezone = Africa\/Johannesburg/g' /etc/opt/rh/rh-php71/php.ini
+RUN sed -i 's/;date.timezone =/date.timezone = Asia\/Jakarta/g' /etc/opt/rh/rh-php71/php.ini
 
 # Open ports
 EXPOSE 80 443
