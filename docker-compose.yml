@@ -20,6 +20,7 @@ services:
         image: icinga2-core:latest
         restart: always
         hostname: icinga2
+        container_name: icingacore2
         privileged: true
         volumes:
            - icinga_config:/etc/icinga2/
@@ -29,6 +30,7 @@ services:
         networks:
            - icinga
            - timeseries
+
     web:
         build: ./web/
         depends_on:
@@ -36,10 +38,11 @@ services:
         image: icinga2-web:latest
         restart: always
         hostname: icingaweb2
+        container_name: icingaweb2
         networks:
           - icinga
         ports:
-          - "8080:80"
+          - "38080:80"
         volumes:
           - web:/etc/icingaweb2
           - apache:/usr/share/icingaweb2/public
@@ -49,7 +52,9 @@ services:
         restart: always
         environment:
           INFLUXDB_DB: icinga2
+          #change admin user according to your setup
           INFLUXDB_ADMIN_USER: admin
+          #change passsword for admin user
           INFLUXDB_ADMIN_PASSWORD: password
           INFLUXDB_USER: icinga
           INFLUXDB_USER_PASSWORD: icinga
