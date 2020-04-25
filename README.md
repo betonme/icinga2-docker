@@ -39,7 +39,7 @@ The newly generated setup token is: b9a60aa0d6226445
 ```
 
 Then proceed to http://<docker-host-ip>:38080/icingaweb2/setup
-!<wec token setup><https://github.com/rpardamean/icinga2-docker/blob/master/img/1.WebToken.JPG>
+![web token setup](https://github.com/rpardamean/icinga2-docker/blob/master/img/1.WebToken.JPG)
   
   
   
