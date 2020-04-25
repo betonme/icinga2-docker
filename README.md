@@ -39,6 +39,10 @@ The newly generated setup token is: b9a60aa0d6226445
 ```
 
 Then proceed to http://<docker-host-ip>:38080/icingaweb2/setup
+
+  
+  
+  
 ### Important
 
 Please note there are default passwords used in the Dockerfiles as well as the docker-compose file. Please adjust these accordingly before use.
