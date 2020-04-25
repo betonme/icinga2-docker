@@ -8,6 +8,12 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
 
     CREATE DATABASE icingaweb2;
     GRANT ALL PRIVILEGES ON DATABASE icingaweb2 TO icinga;
+    
+    
+    CREATE DATABASE director WITH ENCODING 'UTF8';
+    CREATE ROLE director with LOGIN PASSWORD 'director';
+    GRANT ALL PRIVILEGES ON DATABASE director TO director;
+    CREATE EXTENSION pgcrypto;
 
 EOSQL
 
