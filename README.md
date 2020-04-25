@@ -27,10 +27,18 @@ Please read through the Dockerfiles and docker-compose file as well as the impor
 Once you have cloned this repo simply follow the steps below:
 
 ```
-cd <repo-directory>
+git clone https://github.com/rpardamean/icinga2-docker.git
+cd icinga2-docker
 docker-compose up -d
 ```
 
+Enter icingaweb2 container console and generate setup token
+```
+[root@icingaweb2 /]# icingacli setup token create
+The newly generated setup token is: b9a60aa0d6226445
+```
+
+Then proceed to http://<docker-host-ip>:38080/icingaweb2/setup
 ### Important
 
 Please note there are default passwords used in the Dockerfiles as well as the docker-compose file. Please adjust these accordingly before use.
