@@ -19,6 +19,7 @@ ENV container docker
 ENV PGDATA /var/lib/postgresql/data/pgdata
 ENV POSTGRES_USER postgres
 ENV DEBIAN_FRONTEND noninteractive
+ENV POSTGRES_HOST_AUTH_METHOD trust
 
 # Open ports
 EXPOSE 5432
