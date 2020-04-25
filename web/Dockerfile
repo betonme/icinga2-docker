@@ -36,7 +36,7 @@ RUN git clone https://github.com/icinga/icingaweb2-module-reactbundle /usr/share
 #icingacli module enable reactbundle
 
 # Install Icinga module director
-RUN git clone https://github.com/icinga/icingaweb2-module-director /usr/share/icingaweb2/modules/director --branch v0.7.0
+RUN git clone https://github.com/icinga/icingaweb2-module-director /usr/share/icingaweb2/modules/director --branch v1.7.2
 #icingacli module enable director
 
 # Open ports
