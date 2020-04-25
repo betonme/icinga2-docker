@@ -19,7 +19,7 @@ services:
           - timeseries
         image: icinga2-core:latest
         restart: always
-        hostname: icinga2
+        hostname: icingacore2
         container_name: icingacore2
         privileged: true
         volumes:
