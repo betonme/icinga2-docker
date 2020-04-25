@@ -6,7 +6,7 @@ RUN yum -y update; \
                     https://packages.icinga.com/epel/icinga-rpm-release-7-latest.noarch.rpm;
 
 RUN yum -y install wget centos-release-scl httpd rh-php71-php-common rh-php71-php-pgsql; \
-    yum -y install icingaweb2; \
+    yum -y install icingaweb2 git; \
     yum clean all;
 
 # Run CLI setup
